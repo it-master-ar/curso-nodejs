@@ -1,0 +1,250 @@
+<!doctype html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>Intro | Curso Node.js | IT Master</title>
+
+  <link rel="icon" sizes="32x32" type="image/png" href="img/favicon.png">
+
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="css/theme/black.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" integrity="sha384-dNpIIXE8U05kAbPhy3G1cz+yZmTzA6CY8Vg/u2L9xRnHjJiAK76m2BIEaSEV+/aU" crossorigin="anonymous">
+
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="lib/css/zenburn.css">
+
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  </head>
+  <body>
+  <div class="reveal">
+    <div class="slides">
+    <section>
+      <h1>ES6 y un poco más</h1>
+      <img src="img/es6.png" alt="node.js" style="width: 35%">
+    </section>
+
+    <section>
+      <section data-background='img/wtf.gif'>
+        <h1>Que ES (EcmaScript)?</h1>
+      </section>
+
+      <section>
+        <h2>Un poco de Historia</h2>
+        <ul>
+          <li>Mayo 1995   <i class="fa fa-arrow-right"></i> <a href="https://en.wikipedia.org/wiki/Brendan_Eich">Brendan Eich</a> crea JavaScript</li>
+          <li>Agosto 1996 <i class="fa fa-arrow-right"></i> Microsoft "crea" JSScript </li>
+          <li>Junio 1997  <i class="fa fa-arrow-right"></i> Relase de EcmaScript v1</li>
+          <li>Julio 2008 <i class="fa fa-arrow-right"></i> Conformacion del TC39 </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>ECMA</h2>
+        <p>
+          Organización internacional basada en membresías de estándares para la comunicación y la información.
+          Tiene como propósito la estandarización de sistemas computarizados.
+        </p>
+      </section>
+
+      <section>
+        <h2>EcmaScript</h2>
+        <p>
+          Estandarización y especificación para un lenguage de script multiplataforma e independiente.
+        </p>
+        <ul>
+          <li>Sintaxis</li>
+          <li>Semantica</li>
+          <li>Librerias</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>TC39</h2>
+        <ul>
+          <li>Mantener y actualizar el estatandar ES</li>
+          <li>Testear y verificar implementaciones</li>
+          <li>Contribuir con lo estandares</li>
+          <li>Evaluar y considerar propuestas</li>
+        </ul>
+        <a href="https://github.com/tc39">
+          <img src="img/tc39.png" alt="tc39" style="width: 50%">
+        </a>
+      </section>
+
+      <section>
+        <h2>Versiones de ES</h2>
+        <ul>
+          <li>1997 <i class="fa fa-arrow-right"></i> v1.0</li>
+          <li>1998 <i class="fa fa-arrow-right"></i> v2.0</li>
+          <li>1999 <i class="fa fa-arrow-right"></i> v3.0</li>
+          <li><s>v4.0</s></li>
+          <li>2009 <i class="fa fa-arrow-right"></i> v5.0</li>
+          <li>2011 <i class="fa fa-arrow-right"></i> 5.1</li>
+          <li>2015 <i class="fa fa-arrow-right"></i> <s>v6.0</s> v2015</li>
+          <li>2016 <i class="fa fa-arrow-right"></i> <s>v7.0</s> v2016</li>
+          <li>2017 <i class="fa fa-arrow-right"></i> <s>v8.0</s> v2017</li>
+          <li> ?   <i class="fa fa-arrow-right"></i> ES Next</li>
+        </ul>
+        <p>
+          <small><a href="https://esdiscuss.org/">ES Discuss</a></small>
+        </p>
+      </section>
+    </section>
+
+    <section>
+      <section data-background="img/happy.gif">
+        <h1>Nuevas Funcionalidades</h1>
+      </section>
+
+      <section>
+        <h2>Arrow Functions</h2>
+        <pre>
+          <code>
+            function(hello) { console.log(hello); }
+            hello => { console.log(hello) }
+          </code>
+        </pre>
+      </section>
+
+      <section>
+        <h2>Block Scoping</h2>
+        <pre>
+          <code>
+            let a = 1;
+            const b = 1;
+          </code>
+        </pre>
+      </section>
+
+      <section>
+        <h2>Object Shorthands</h2>
+        <pre>
+          <code>
+            const name = 'Ignacio';
+            const age = 27;
+
+            const person = { name, age };
+          </code>
+        </pre>
+      </section>
+
+      <section>
+        <h2>Nuevas Funcionalidades: Object</h2>
+      </section>
+
+      <section>
+        <h2>Nuevas Funcionalidades: Array</h2>
+      </section>
+
+      <section>
+        <h2>Nuevas Funcionalidades: String</h2>
+      </section>
+
+      <section>
+        <h2>Desctructuring</h2>
+      </section>
+
+      <section>
+        <h2>String Templates</h2>
+        <pre>
+          <code>
+            const hello = 'Hello';
+
+            console.log(`${hello} word!`);
+          </code>
+        </pre>
+      </section>
+
+      <section>
+        <h2>ES Modules</h2>
+      </section>
+
+      <section>
+        <h2>Promises</h2>
+      </section>
+
+      <section>
+        <h2>Iterators</h2>
+      </section>
+
+      <section>
+        <h2>Generators</h2>
+      </section>
+
+      <section>
+        <h2>Spread & Rest Operators</h2>
+      </section>
+
+      <section>
+        <h2>Y Más...</h2>
+      </section>
+    </section>
+
+    <section>
+      <h1>Transpiling</h1>
+      <p>Transformar y Compilar</p>
+      <ul>
+        <li><a href="">Babel</a></li>
+        <li><a href="">Traceur</a></li>
+        <li><a href="">TypeScript</a></li>
+        <li><a href="">es6-shim</a></li>
+      </ul>
+      <p>
+        <small><a href="https://github.com/jashkenas/coffeescript/wiki/List-of-languages-that-compile-to-JS">"Lenguages" que compilan a JS</a></small>
+      </p>
+    </section>
+
+
+    <section>
+      <h1>Soporte</h1>
+      <ul>
+        <li><a href="http://caniuse.com/">Can I Use?</a></li>
+        <li><a href="http://kangax.github.io/compat-table/es6/">Kangax</a></li>
+        <li><a href="http://node.green/">Node Green</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h1>Recursos</h1>
+      <ul>
+        <li><a href="http://www.2ality.com/search/label/esnext">2ality</a></li>
+        <li><a href="https://www.nczonline.net/blog/tag/ecmascript-6/">NCZ</a></li>
+        <li><a href="https://github.com/lukehoban/es6features">Lukehoban</a></li>
+        <li><a href="https://github.com/getify/You-Dont-Know-JS/tree/master/es6%20%26%20beyond">ES6 & Beyeond</a> (YDKJS)</li>
+        <li><a href="https://github.com/ericdouglas/ES6-Learning">ES6 Learning</a></li>
+
+      </ul>
+    </section>
+
+    </div>
+  </div>
+
+  <script src="lib/js/head.min.js"></script>
+  <script src="js/reveal.js"></script>
+
+  <script>
+    Reveal.initialize({
+    history: true,
+
+    dependencies: [
+      { src: 'plugin/markdown/marked.js' },
+      { src: 'plugin/markdown/markdown.js' },
+      { src: 'plugin/notes/notes.js', async: true },
+      { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+    ]
+    });
+  </script>
+  </body>
+</html>
