@@ -68,6 +68,11 @@
           <li>Semantica</li>
           <li>Librerias</li>
         </ul>
+        <p>
+          <small>
+            <a href="http://wiki.ecmascript.org/doku.php?id=harmony:specification_drafts">Specs</a>
+          </small>
+        </p>
       </section>
 
       <section>
@@ -109,92 +114,150 @@
       </section>
 
       <section>
-        <h2>Arrow Functions</h2>
-        <pre>
-          <code>
-            function(hello) { console.log(hello); }
-            hello => { console.log(hello) }
-          </code>
-        </pre>
+        <h2>Arrow Functions & Lexical <code>this</code></h2>
+        <p><code>this</code> funciona como realmente esperas que funcione</p>
+        <p>Código mas corto y mas <i>functional oriented</i></p>
+        <div class='gist-container'>
+          <script src="https://gist.github.com/ianaya89/796b6a4d9289f2256b1e577747ced9db.js"></script>
+        </div>
+        <p>
+          <small>NO reemplazan a la funcion tradicional.</small>
+        </p>
+        <p>
+          <small>Usar en <code>callbacks</code>. <a href="https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20%26%20beyond/ch2.md">(Cuando?)</a></small>
+        </p>
       </section>
 
       <section>
-        <h2>Block Scoping</h2>
-        <pre>
-          <code>
-            let a = 1;
-            const b = 1;
-          </code>
-        </pre>
-      </section>
-
-      <section>
-        <h2>Object Shorthands</h2>
-        <pre>
-          <code>
-            const name = 'Ignacio';
-            const age = 27;
-
-            const person = { name, age };
-          </code>
-        </pre>
-      </section>
-
-      <section>
-        <h2>Nuevas Funcionalidades: Object</h2>
-      </section>
-
-      <section>
-        <h2>Nuevas Funcionalidades: Array</h2>
-      </section>
-
-      <section>
-        <h2>Nuevas Funcionalidades: String</h2>
-      </section>
-
-      <section>
-        <h2>Desctructuring</h2>
-      </section>
-
-      <section>
-        <h2>String Templates</h2>
-        <pre>
-          <code>
-            const hello = 'Hello';
-
-            console.log(`${hello} word!`);
-          </code>
-        </pre>
-      </section>
-
-      <section>
-        <h2>ES Modules</h2>
+        <h2>Mejores <i>Tail Calls</i></h2>
+        <p>Optimizacion de <i>Tail Calls</i>, fundamentales para recursion.</p>
+        <script src="https://gist.github.com/ianaya89/9687e492d43e17ac85cb42d1179b2704.js"></script>
       </section>
 
       <section>
         <h2>Promises</h2>
+        <p>Objecto usado como <i>placeholder</i> de eventuales resultados.</p>
+        <p>Representa un evento que va a ocurrir, pero no AHORA (asincronismo).</p>
+        <p>Posibles Estados: <i>fulfilled</i>, <i>rejected</i> o <i>pending</i></p>
+        <p>Pueden encadenarse</p>
+        <p><code>then()</code> & <code>catch()</code></p>
+        <script src="https://gist.github.com/ianaya89/a68bb84aaca8efcc9cb95c3bceb6bd45.js"></script>
       </section>
 
       <section>
-        <h2>Iterators</h2>
+        <h2>Block Scoping</h2>
+        <p style="font-size: 36px">El scope de una variable puede ser limitado a bloques entre <code>{}</code> </p>
+        <ul>
+          <li><code>let</code> <i class="fa fa-arrow-right"></i> pueden ser reasignadas</li>
+          <li><code>const</code> <i class="fa fa-arrow-right"></i> NO pueden ser reasignadas</li>
+        </ul>
+        <div class='gist-container'>
+          <script src="https://gist.github.com/ianaya89/8fd4527b7633366ce3019685a2aeeb9a.js"></script>
+        </div>
       </section>
 
       <section>
-        <h2>Generators</h2>
+        <h2>Object Literal Extensions</h2>
+        <p>Algunas mejoras y extensiones para las objectos literales <code>{...}</code></p>
+        <script src="https://gist.github.com/ianaya89/8aeb3443b598d5bbc13fe39dd30c67f8.js"></script>
+        <p>
+          <small>
+            <a href="https://ariya.io/2013/02/es6-and-destructuring-assignment">
+              ECMAScript 6 and Destructuring Assignment
+            </a>
+          </small>
+        </p>
       </section>
 
       <section>
-        <h2>Spread & Rest Operators</h2>
+        <h2>Desctructuring</h2>
+        <p>Nueva forma de asignar valores contenidos en <code>Object</code> o <code>Array</code>.</p>
+        <script src="https://gist.github.com/ianaya89/8e2d6edc77d87afb319e1cfaca85f6f8.js"></script>
+      </section>
+
+      <section>
+        <h2>Maps</h2>
+        <p>Estructura de datos tipo diccionario que permite cualquier valor como <code>key</code>.</p>
+        <script src="https://gist.github.com/ianaya89/f7e888bb945f8933e33c99007a63b31f.js"></script>
+        <p>
+          <small>
+            WeakMaps <i class="fa fa-arrow-right"></i> misma API pero no se puede iterar sobre el contenido
+          </small>
+        </p>
+      </section>
+
+      <section>
+        <h2>Sets</h2>
+        <p>Estructura de datos tipo tipo conjunto, donde los valores son unicos.</p>
+        <script src="https://gist.github.com/ianaya89/8ac3a72199f6175fe0c357695c338c31.js"></script>
+        <p>
+          <small>
+            WeakSets <i class="fa fa-arrow-right"></i> misma API pero no se puede iterar sobre el contenido
+          </small>
+        </p>
+      </section>
+
+      <section>
+        <h2>Iterator & <code>for..of</code> Loop</h2>
+        <p>Objeto con metodo <code>next()</code> que devuelve una tupla <code>{ code, value }</code></p>
+        <p> String, Array, TypedArray, Map and Set son iterables.</p>
+        <script src="https://gist.github.com/ianaya89/a4088d438c6473a43345c777c3c33ea9.js"></script>
+      </section>
+
+      <section>
+        <h2>Class</h2>
+        <p style="font-size: 30px"><code>constructor</code> <i class="fa fa-arrow-right"></i> metodo constructor.</p>
+        <p style="font-size: 30px"><code>extends</code> <i class="fa fa-arrow-right"></i> nos permite extender de un objecto (herencia).</p>
+        <p style="font-size: 30px"><code>super</code> <i class="fa fa-arrow-right"></i> refiere al metodo padre.</p>
+        <p style="font-size: 30px"><code>static</code> <i class="fa fa-arrow-right"></i> podemos declarar metodos estaticos.</p>
+        <script src="https://gist.github.com/ianaya89/682ad30261b0c799166d4a5f1979c76d.js"></script>
+        <p>
+          <small>
+            Las clases es una mejora en la sintaxis, a bajo nivel la implementacion sigue utilizando prototipos.
+          </small>
+        </p>
+      </section>
+
+      <section>
+        <h2>Template Literals</h2>
+        <p>Sustituir variables y llamadas a funciones en strings.</p>
+        <script src="https://gist.github.com/ianaya89/b7168bea03814edadec790db916dc7d4.js"></script>
+      </section>
+
+      <section>
+        <h2>Spread & Rest Operator</h2>
+        <p>Manerca compacta de asignar a parametros a una funcion.</p>
+        <p>Puede usarse para copiar contenido de un <code>Array</code>.</p>
+        <script src="https://gist.github.com/ianaya89/72a1c5abf227fb04ca9b53e28227ebfd.js"></script>
+      </section>
+
+      <section>
+        <h2>Default Parameters</h2>
+        <p>Asignar valores default a las funciones.</p>
+        <script src="https://gist.github.com/ianaya89/96a294dbab5e8e3863e24b4bff973bc2.js"></script>
       </section>
 
       <section>
         <h2>Y Más...</h2>
+        <ul>
+          <li><a href="">ES Modules</a></li>
+          <li><a href="">Generators</a></li>
+          <li><a href="">Proxies</a></li>
+          <li><a href="">String API</a></li>
+          <li><a href="">Math API</a></li>
+          <li><a href="">Object API</a></li>
+          <li><a href="">Array API</a></li>
+          <li><a href="">Number API</a></li>
+          <li><a href="">Regex</a></li>
+          <li><a href="">Unicode</a></li>
+        </ul>
       </section>
     </section>
 
     <section>
       <h1>Transpiling</h1>
       <p>Transformar y Compilar</p>
+      <p>Herramienta para transformar to codigo ES6 a codigo que funcione en ambientes ES5.</p>
       <ul>
         <li><a href="">Babel</a></li>
         <li><a href="">Traceur</a></li>
@@ -203,6 +266,18 @@
       </ul>
       <p>
         <small><a href="https://github.com/jashkenas/coffeescript/wiki/List-of-languages-that-compile-to-JS">"Lenguages" que compilan a JS</a></small>
+      </p>
+    </section>
+
+    <section>
+      <h1>Shims & Polyfills</h1>
+      <ul>
+        <li>No todo necesita transpilier.</li>
+        <li>Patrones para definir comportamiento equivalente de una version nueva a una vieja.</li>
+        <li>La sintaxys no puede ser <i>polyfilled</i>, pero si las API's</li>
+      </ul>
+      <p>
+        <small><a href="https://github.com/paulmillr/es6-shim/">es6-shim</a></small>
       </p>
     </section>
 

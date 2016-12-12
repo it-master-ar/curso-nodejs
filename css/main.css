@@ -43,3 +43,16 @@ body {
 .reveal aside.controls button.navigate-up.enabled {
   border-bottom-color: #333333;
 }
+
+.reveal pre {
+  box-shadow: none;
+}
+
+
+.gist-data {
+  max-height: 300px !important;
+}
+
+.gist {
+  margin-top: 20px !important;
+}
