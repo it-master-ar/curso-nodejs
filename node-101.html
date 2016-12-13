@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>Intro | Curso Node.js | IT Master</title>
+
+  <link rel="icon" sizes="32x32" type="image/png" href="img/favicon.png">
+
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="css/theme/black.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" integrity="sha384-dNpIIXE8U05kAbPhy3G1cz+yZmTzA6CY8Vg/u2L9xRnHjJiAK76m2BIEaSEV+/aU" crossorigin="anonymous">
+
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="lib/css/zenburn.css">
+
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  </head>
+  <body>
+  <div class="reveal">
+    <div class="slides">
+    <section data-background="img/notes.gif">
+      <h1>Node.js 101</h1>
+    </section>
+
+    <section>
+      <section data-background="img/think.gif">
+        <h1>Que es Node.js?</h1>
+      </section>
+
+      <section>
+        <h2>Que NO es Node.js!</h2>
+        <ul>
+          <li>Un framwork</li>
+          <li>Un lenguage de programacion</li>
+          <li>Un servidor web</li>
+          <li>Una aplicacion</li>
+          <li>Una libreria</li>
+          <li>No es una solucion universal a todos nuestros problemas</li>
+        </ul>
+      </section>
+
+      <section>
+        <p>Es una plataforma que corre sobre el <i>runtime</i> de JavaScript <a href="https://developers.google.com/v8/">V8</a>, basada en programacion orientada a eventos y asincronismo en I/O.</p>
+        <p>Fue creado por <a href="https://www.youtube.com/watch?v=ztspvPYybIY">Ryan Dahl</a> en 2009</p>
+        <p>
+          <small><a href="https://stackshare.io/nodejs">Quienes lo usan?</a></small>
+          <br>
+          <small><a href="https://nodejs.org/en/foundation/members/">Quienes lo apoyan?</a></small>
+        </p>
+      </section>
+
+      <section data-background="img/wait.gif">
+        <h1>🤔🤔🤔</h1>
+      </section>
+
+      <section>
+        <p>Nos permite utilizar el lenguage JavaScript en el servidor e interactuar con el Sistema Operativo.</p>
+        <p>Algunos Modulos Internos:</p>
+        <ul>
+          <li>http</li>
+          <li>fs</li>
+          <li>util</li>
+          <li>os</li>
+          <li>stream</li>
+          <li>crypto</li>
+          <li>net</li>
+          <li>child-process</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Caracteristicas</h2>
+        <ul>
+          <li>100% Open Source</li>
+          <li>Multiplataforma (funciona incluso en windows 😝)</li>
+          <li><i>Single Thread</i></li>
+          <li>"Altamente Performante"</li>
+          <li>"Facil Escalabilidad"</li>
+          <li>Filosofia Unix <i class="fa fa-arrow-right"></i> "Hacer sola una cosa y hacerla bien", "Programas que funcionen juntos", "Manejar streams de texto".</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Versiones</h2>
+        <ul>
+          <li>2008 <i class="fa fa-arrow-right"></i> v0.1</li>
+          <li>2013 <i class="fa fa-arrow-right"></i> v0.10</li>
+          <li>01-2015 <i class="fa fa-arrow-right"></i> io.js v1</li>
+          <li>02-2015 <i class="fa fa-arrow-right"></i> v0.12</li>
+          <li>09-2015 <i class="fa fa-arrow-right"></i> v4</li>
+          <li>10-2015 <i class="fa fa-arrow-right"></i> v5</li>
+          <li>04-2016 <i class="fa fa-arrow-right"></i> v6 🙌</li>
+          <li>10-2016 <i class="fa fa-arrow-right"></i> v7</li>
+        </ul>
+        <p>
+          <small>LTS <i class="fa fa-arrow-right"></i> 30 meses de soporte</small>
+          <br>
+          <small>Current <i class="fa fa-arrow-right"></i> 6 meses de soporte</small>
+        </p>
+      </section>
+
+      <section>
+        <h2>v6</h2>
+        <ul>
+          <li>99% de soporte sobre ES6</li>
+          <li>Carga de modulos 4x mas rapida</li>
+          <li>Muchas mejoras de seguridad</li>
+        </ul>
+      </section>
+
+    </section>
+
+    </div>
+  </div>
+
+  <script src="lib/js/head.min.js"></script>
+  <script src="js/reveal.js"></script>
+
+  <script>
+    Reveal.initialize({
+    history: true,
+
+    dependencies: [
+      { src: 'plugin/markdown/marked.js' },
+      { src: 'plugin/markdown/markdown.js' },
+      { src: 'plugin/notes/notes.js', async: true },
+      { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+    ]
+    });
+  </script>
+  </body>
+</html>
