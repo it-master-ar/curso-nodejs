@@ -1,0 +1,184 @@
+<!doctype html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>Intro | Curso Node.js | IT Master</title>
+
+  <link rel="icon" sizes="32x32" type="image/png" href="img/favicon.png">
+
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="css/theme/black.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" integrity="sha384-dNpIIXE8U05kAbPhy3G1cz+yZmTzA6CY8Vg/u2L9xRnHjJiAK76m2BIEaSEV+/aU" crossorigin="anonymous">
+
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="lib/css/zenburn.css">
+
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  </head>
+  <body>
+  <div class="reveal">
+    <div class="slides">
+    <section>
+      <h1>npm & <code>package.json</code></h1>
+    </section>
+
+    <section>
+      <section>
+        <h1>npm</h1>
+        <p>Package manager creado para Node.js (y FrontEnd).</p>
+        <p>El registro de npm es una coleccion publica de librerias para Node.js, front-end, mobile, robots y mas.</p>
+        <p>Cliente de linea de comandos: <code>npm</code></p>
+        <p>
+          <small>
+            <a href="https://www.npmjs.com/browse/star">Modulos mas usados</a>
+          </small>
+        </p>
+      </section>
+
+      <section>
+        <h2>Modulos Para Todos 🙌 👏</h2>
+        <p>Registro Open Source con mas cantidad de librerias.</p>
+        <img src="img/npm-stats.png" alt="npm-stats">
+      </section>
+
+      <section>
+        <h2>Instalacion Local</h2>
+        <p><code>npm i [module]</code></p>
+        <p>Modulos instalados en el directorio actual dentro de <code>node_modules</code></p>
+        <hr>
+        <ul>
+          <li><code>npm i -S [module]</code> <i class="fa fa-arrow-right"></i> Se guarda el modulo como <i>dependency</i></li>
+          <li><code>npm i -D [module]</code> <i class="fa fa-arrow-right"></i> Se guarda el modulo como <i>dev-dependency</i></li>
+        </ul>
+        <p>
+          <small><code>npm uninstall -S [module]</code></small>
+        </p>
+      </section>
+
+      <section>
+        <h2>Instalacion Global</h2>
+        <p><code>npm i -g [module]</code></p>
+        <p>Modulos instalados a nivel global dentro de <code>node_modules</code></p>
+        <p>Pueden ser accedidos por linea de comandos</p>
+        <p>
+          <small><code>npm uninstall -g [module]</code></small>
+        </p>
+      </section>
+
+      <section>
+        <h2>Comandos del CLI</h2>
+      </section>
+    </section>
+
+    <section>
+      <section>
+        <h1><code>package.json</code></h1>
+        <p>Contiene documentacion y metadata sobre el proyecto.</p>
+        <p>Almacena la lista de <i>depedencies</i> y <i>devDependencies</i> utilizadas.</p>
+        <p>Hace que el proyecto sea reproducible y facil de compartir.</p>
+        <p>Podemos (y debemos) crearlo con el comando <code>npm init</code></p>
+      </section>
+
+      <section>
+        <h2>Anotomía Básica</h2>
+        <script src="https://gist.github.com/ianaya89/2a866fb30fe6c5721da7e84df2888ece.js"></script>
+        <p>
+          <small><a href="https://docs.npmjs.com/getting-started/semantic-versioning">semver</a></small>
+        </p>
+      </section>
+
+      <section>
+        <h2>Manejando Dependencias</h2>
+        <ul style="font-size: 30px">
+          <li><code>npm i -S [module]</code> || <code> npm i --save [module]</code></li>
+          <li><code>npm i -D [module]</code> || <code> npm i --save-dev [module]</code></li>
+        </ul>
+        <script src="https://gist.github.com/ianaya89/8cec956ff6f3173406c06ff4c80503c8.js"></script>
+        <p>
+          <small><code>*</code> <i class="fa fa-arrow-right"></i> ultima version</small>
+          <br>
+          <small><code>~</code> <i class="fa fa-arrow-right"></i> ultima <i>minor</i> version</small>
+          <br>
+          <small><code>^</code> <i class="fa fa-arrow-right"></i> ultima <i>major</i> version</small>
+        </p>
+      </section>
+
+      <section data-background="img/no.gif">
+        <h2>No usar "*" ni "latest" para manejar versiones</h2>
+      </section>
+
+    </section>
+
+    <section data-background="img/magic.gif">
+      <h1>Creando Modulos 😮</h1>
+      <ul>
+        <li>Crear cuenta en npm</li>
+        <li><code>npm init</code></li>
+        <li>Crear un archivo <code>index.js</code></li>
+        <li><code>npm login</code></li>
+        <li><code>npm publish</code></li>
+      </ul>
+      <p>
+        <small>Podemos usar el archivo <code>.npmignore</code> para omitir contenido</small>
+      </p>
+      <p>
+        <small>Para subir una actualizacion del modulo, debemos cambiar la version.</small>
+      </p>
+    </section>
+
+    <section>
+      <h1>npm scripts</h1>
+      <p>Comandos que pueden ser definidos en el <code>package.json</code></p>
+      <ul>
+        <li><code>start</code> <i class="fa fa-arrow-right"></i> iniciar aplicacion</li>
+        <li><code>test</code> <i class="fa fa-arrow-right"></i> correr los tests</li>
+        <li><code>xxx</code> <i class="fa fa-arrow-right"></i> podemos definir nuestros propios scripts</li>
+      </ul>
+      <p>
+        <small>Salvo <code>test</code> y <code>start</code>, los scripts se corren con el comando <code>npm run [script]</code>.</small>
+      </p>
+      <p>
+        <small>Nos permiten evitar los modulos globales</small>
+      </p>
+    </section>
+
+    <section>
+      <h1>Recursos</h1>
+      <ul>
+        <li><a href="https://docs.npmjs.com/getting-started/what-is-npm">npm docs</a></li>
+        <li><a href="https://docs.npmjs.com/misc/scripts">npm scripts</a></li>
+      </ul>
+    </section>
+
+    </div>
+  </div>
+
+  <script src="lib/js/head.min.js"></script>
+  <script src="js/reveal.js"></script>
+
+  <script>
+    Reveal.initialize({
+    history: true,
+
+    dependencies: [
+      { src: 'plugin/markdown/marked.js' },
+      { src: 'plugin/markdown/markdown.js' },
+      { src: 'plugin/notes/notes.js', async: true },
+      { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+    ]
+    });
+  </script>
+  </body>
+</html>
