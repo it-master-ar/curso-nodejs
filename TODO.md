@@ -1,7 +1,7 @@
 ● Trabajando con el file system, buffers y streams
 ● Core Networking Modules
 
-● Conectándonos a bases de dato
+● Conectándonos a bases de datos
 ● Introducción MongoDB
 ● Configurando y trabajando con Mongo para bases NoSQL
 
