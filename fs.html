@@ -32,6 +32,32 @@
     <div class="slides">
       <section>
         <h1><code>fs</code></h1>
+        <ul>
+          <li>Modulo para interactuar con el <i>File System</i>.</li>
+          <li><a href="https://en.wikipedia.org/wiki/POSIX">POSIX</a></li>
+          <li>Metodos sincronicos y asincronicos</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Leer Archivos</h2>
+        <script src="https://gist.github.com/ianaya89/dc31129c48902ffa8fd1f23140ceed09.js"></script>
+      </section>
+
+      <section>
+        <h2>Escribir Archivos</h2>
+        <script src="https://gist.github.com/ianaya89/e609114277c88fb3464b73859e3e19b9.js"></script>
+      </section>
+
+      <section>
+        <h2>Error First</h2>
+        <ul>
+          <li>Patron de diseño utilizado en Node.js y <i>callbacks</i>.</li>
+          <li>Primer parametro es siempre el un <code>error</code>.</li>
+          <li>Segundo parametro reservado para <i>success case</i>.</li>
+          <li>Cada <i>callback</i> debe manejar los errores.</li>
+        </ul>
+        <script src="https://gist.github.com/ianaya89/882f56bb78021bece4ea686cded3e8ce.js"></script>
       </section>
     </div>
   </div>
