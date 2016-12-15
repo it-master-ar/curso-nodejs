@@ -30,219 +30,63 @@
   <body>
   <div class="reveal">
     <div class="slides">
-    <section data-background="img/notes.gif">
-      <h1>Node.js 101</h1>
-    </section>
-
-    <section>
-      <section data-background="img/think.gif">
-        <h1>Que es Node.js?</h1>
+      <section data-background="img/hello2.gif">
+        <h1>Hello Server!</h1>
       </section>
 
       <section>
-        <h2>Que NO es Node.js!</h2>
-        <ul>
-          <li>Un framework</li>
-          <li>Un lenguage de programacion</li>
-          <li>Un servidor web</li>
-          <li>Una aplicacion</li>
-          <li>Una libreria</li>
-          <li>No es una solucion universal a todos nuestros problemas</li>
-        </ul>
-      </section>
+        <section>
+          <h1>Código</h1>
+          <script src="https://gist.github.com/ianaya89/b52c0d8cff44ef5a98b0cd3c635ad4d4.js"></script>
+        </section>
 
-      <section>
-        <p>Es una plataforma que corre sobre el <i>runtime</i> de JavaScript <a href="https://developers.google.com/v8/">V8</a>, basada en un modelo <i>event-driven</i> y de <i>non-blocking</i> I/O.</p>
-        <p>Fue creado por <a href="https://www.youtube.com/watch?v=ztspvPYybIY">Ryan Dahl</a> en 2009 (C++)</p>
-        <p>Utiliza <a href="https://github.com/libuv/libuv">libuv</a>, una libreria multiplataforma para async I/O.</p>
-        <p>
-          <small><a href="https://stackshare.io/nodejs">Quienes lo usan?</a></small>
-          <br>
-          <small><a href="https://nodejs.org/en/foundation/members/">Quienes lo apoyan?</a></small>
-        </p>
-      </section>
+        <section>
+          <h2>Commonjs</h2>
+          <ul>
+            <li>Modulo <i class="fa fa-arrow-right"></i> pieza de codigo encapsulada y funcional.</li>
+            <li>Sistema de carga de modulos usado por Node.js</li>
+            <li><code>require('nombre-de-modulo')</code></li>
+          </ul>
 
-      <section data-background="img/wait.gif">
-        <h1>🤔🤔🤔</h1>
-      </section>
+          <p>
+            <small>Usar <i>dash-case</i> para modulos.</small>
+          </p>
+        </section>
 
-      <section>
-        <p>Nos permite utilizar el lenguage JavaScript en el servidor e interactuar con el Sistema Operativo.</p>
-        <p>Algunos Modulos Internos:</p>
-        <ul>
-          <li>http</li>
-          <li>fs</li>
-          <li>util</li>
-          <li>os</li>
-          <li>stream</li>
-          <li>crypto</li>
-          <li>net</li>
-          <li>child-process</li>
-        </ul>
-      </section>
+        <section>
+          <h2>Modulo <code>http</code></h2>
+          <ul>
+            <li>Permite crear servidores y clientes HTTP.</li>
+            <li>Basada en <code>EventEmitter</code></li>
+            <li>Sporta <code>streams</code></li>
+          </ul>
+          <p>
+            <small><a href="https://nodejs.org/api/http.html#http_http">API</a></small>
+          </p>
+        </section>
 
-      <section>
-        <h2>Caracteristicas</h2>
-        <ul>
-          <li>100% Open Source</li>
-          <li>Multiplataforma (funciona incluso en windows 😝)</li>
-          <li><i>Single Thread</i></li>
-          <li>"Altamente Performante"</li>
-          <li>"Facil Escalabilidad"</li>
-          <li>Filosofia Unix <i class="fa fa-arrow-right"></i> "Hacer sola una cosa y hacerla bien", "Programas que funcionen juntos", "Manejar streams de texto".</li>
-        </ul>
-      </section>
+        <section>
+          <h2><code>EventEmitter</code></h2>
+          <script src="https://gist.github.com/ianaya89/e7d50fc58655eff09fd22133467e80b2.js"></script>
+        </section>
 
-      <section>
-        <h2>Versiones</h2>
-        <ul>
-          <li>2008 <i class="fa fa-arrow-right"></i> v0.1</li>
-          <li>2013 <i class="fa fa-arrow-right"></i> v0.10</li>
-          <li>01-2015 <i class="fa fa-arrow-right"></i> io.js v1</li>
-          <li>02-2015 <i class="fa fa-arrow-right"></i> v0.12</li>
-          <li>09-2015 <i class="fa fa-arrow-right"></i> v4</li>
-          <li>10-2015 <i class="fa fa-arrow-right"></i> v5</li>
-          <li>04-2016 <i class="fa fa-arrow-right"></i> v6 🙌</li>
-          <li>10-2016 <i class="fa fa-arrow-right"></i> v7</li>
-        </ul>
-        <p>
-          <small>LTS <i class="fa fa-arrow-right"></i> 30 meses de soporte</small>
-          <br>
-          <small>Current <i class="fa fa-arrow-right"></i> 6 meses de soporte</small>
-        </p>
-      </section>
+        <section>
+          <h2><code>Streams</code></h2>
+          <ul>
+            <li>Extienden de <code>EventEmitter</code></li>
+            <li>Lectura</li>
+            <li>Escritura</li>
+            <li>Duplex</li>
+          </ul>
 
-      <section>
-        <h2>v6</h2>
-        <ul>
-          <li>99% de soporte sobre ES6</li>
-          <li>Carga de modulos 4x mas rapida</li>
-          <li>Muchas mejoras de seguridad</li>
-        </ul>
-      </section>
-    </section>
+          <p>
+            <small>
+              <a href="https://nodejs.org/api/http.html#http_http">API</a>
+            </small>
+          </p>
+        </section>
 
-    <!-- <section>
-      <section>
-        <h1>Arquitectura</h1>
       </section>
-
-      <section>
-        <h2>Event Driven</h2>
-        <p>Paradigma de programacion donde el flujo de un programa es determinado por eventos como acciones del usuario, salida de sensores o mensajes de otros programas/procesos.</p>
-      </section>
-
-      <section>
-        <h2>Event Loop</h2>
-        <p>Es el corazon de Node.js, responsable de registrar las operaciones asincronicas.</p>
-        <p>Mecanismo principal que escucha eventos y ejecuta <i>callbacks</i>.</p>
-        <img src="img/event-loop.jpg" alt="" style="width: 60%; padding: 5px">
-      </section>
-
-      <section>
-        <h2><code>EventEmitter</code></h2>
-        <p><i>Wrapper</i> generico que nos permite crear API's orientadas a eventos.</p>
-        <script src="https://gist.github.com/ianaya89/f783c5c6d2a8a246019d22f6c7f6310c.js"></script>
-      </section>
-
-      <section>
-        <h2>Single Threaded</h2>
-        <p>Corre en un solo thread basado en una tecnica de <i>non-blocking</i> I/O.</p>
-        <p>
-          <small>I/O se refiere a interaccion en disco y la red.</small>
-        </p>
-      </section>
-
-      <section>
-        <h2>blocking</h2>
-        <p>Ejecucion de codigo JS debe esperar hasta que el proceso NO JS termine.</p>
-      </section>
-    </section> -->
-
-    <section>
-      <section>
-        <h1>blocking vs. non-blcking</h1>
-      </section>
-
-      <section>
-        <h2>blocking</h2>
-        <p>Operaciones que dejan el CPU osioso hasta que se terminen de ejecutar.</p>
-        <p>Para ejecutar operaciones en simultaneo se necesitan mas <i>threads</i>.</p>
-      </section>
-
-      <section>
-        <h2>non-blocking</h2>
-        <p>No hay tiempos osiosos para el CPU.</p>
-        <p>Se ejecutan nuevas operaciones mientras se esperan que finalicen las anteriores.</p>
-      </section>
-
-      <section>
-        <h2>blocking en Node.js</h2>
-        <ul>
-          <li>Ejecucion de codigo JS debe esperar hasta que operaciones NO JS finalicen.</li>
-          <li>Bloqueo del <i>Event-Loop</i></li>
-          <li>No son operaciones de CPU sino interacciones con I/O.</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Ejemplo</h2>
-        <script src="https://gist.github.com/ianaya89/c51d34cc02ed8707accbf1e275aec8eb.js"></script>
-        <p>
-          <small>
-            "Siempre" que podamos, debemos usar metodos <i>non-blocking</i>
-          </small>
-        </p>
-      </section>
-    </section>
-
-    <section>
-      <section data-background="img/burns.gif">
-        <h1>Concurrencia</h1>
-      </section>
-
-      <section>
-        <h2>Single Thread</h2>
-        <ul>
-          <li>1 único thread.</li>
-          <li>Concurrencia orientada a eventos.</li>
-        </ul>
-        <p>Concurrencia manejada por el <i>Event-Loop</i> y nuestro buen eso de <i>non-blocking</i>.</p>
-      </section>
-
-      <section>
-        <h2>Por qué Single Thread?</h2>
-        <ul>
-          <li>Es costoso para los OS cambiar de threads.</li>
-          <li>Es dificil (y tedioso) compartir informacion entre threads.</li>
-          <li>Implica mas codigo, mas tiempo de desarrollo y mas precauciones.</li>
-        </ul>
-      </section>
-    </section>
-
-    <section>
-      <section>
-        <h1>Event Driven</h1>
-        <p>
-          Paradigma de programacion donde el flujo del programa es determinado por evetenos como acciones del usuario, sentores o mensajes de otros programas.
-        </p>
-      </section>
-
-      <section>
-        <h2>Event-Loop</h2>
-        <p>
-          Corazon de Node.js, responsable de registrar y ejecutar las operaciones asincronicas.
-        </p>
-        <p>Escucha eventos y dipara callbacks (a traves de una <i>queue</i>)</p>
-        <script src="https://gist.github.com/ianaya89/bc2c08fd601f4289c723bc8e786394bf.js"></script>
-        <p>
-          <small>
-            <a href="https://blog.risingstack.com/node-js-at-scale-understanding-node-js-event-loop/">Understanding Event Loop</a>
-          </small>
-        </p>
-      </section>
-
-    </section>
 
     </div>
   </div>
