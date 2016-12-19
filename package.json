@@ -5,7 +5,8 @@
   "homepage": "https://it-master-ar.github.io/curso-nodejs/",
   "scripts": {
     "test": "grunt test",
-    "start": "grunt serve"
+    "dev": "grunt serve",
+    "start": "http-server -p 8585"
   },
   "author": {
     "name": "Ignacio Anaya",
@@ -33,6 +34,7 @@
     "grunt-contrib-watch": "~0.6.1",
     "grunt-sass": "~1.1.0-beta",
     "grunt-zip": "~0.17.1",
+    "http-server": "^0.9.0",
     "node-sass": "~3.13.0"
   },
   "license": "MIT"
