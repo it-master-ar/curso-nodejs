@@ -30,8 +30,162 @@
   <body>
   <div class="reveal">
     <div class="slides">
-      <section data-background="img/hello2.gif">
+      <section>
         <h1>Express</h1>
+      </section>
+
+      <section>
+        <section>
+          <h1>Introducción</h1>
+        </section>
+
+        <section>
+          <h2>Que es?</h2>
+          <ul>
+            <li>Webframework para Node.js</li>
+            <li>Rápido, minimalista y "sin opion"</li>
+            <li>API's & Web Apps</li>
+            <li>Pensado para Node.js (EventLoop)</li>
+            <li><code>npm install express --save</code></li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Hello Express</h2>
+          <script src="https://gist.github.com/ianaya89/52ba9a02aacdeea9fe65e50d03043303.js"></script>
+        </section>
+
+        <section>
+          <h2>Generador</h2>
+          <ol>
+            <li>
+              <code>$ npm install express-generator -g</code>
+            </li>
+            <li>
+              <code>$ express --view=jade myApp</code>
+            </li>
+            <li>
+              <code>$ cd myApp && npm i</code>
+            </li>
+            <li>
+              <code>$ npm start</code>
+            </li>
+          </ol>
+        </section>
+
+      </section>
+
+      <section>
+        <section>
+          <h1>Routing</h1>
+          <ul>
+            <li>Determinar como una aplicación responde a un <i>request</i> http a traves de un <i>endpoint</i>.</li>
+            <li>URI (URL) + Metodo HTTP</li>
+            <li>1 Ruta <i class="fa fa-arrow-right"></i> N <i>Handlers</i></li>
+            <li><code>app.METHOD(PATH, HANDLER)</code></li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Creando Routes</h2>
+          <p><code>app.METHOD(PATH, HANDLER)</code></p>
+          <ul>
+            <li><code>app</code> <i class="fa fa-arrow-right"></i> instancia de express</li>
+            <li><code>METHOD</code> <i class="fa fa-arrow-right"></i> Metodo HTTP</li>
+            <li><code>PATH</code> <i class="fa fa-arrow-right"></i> path</li>
+            <li><code>HANDLER</code> <i class="fa fa-arrow-right"></i> funcion a ejecutar</li>
+          </ul>
+          <script src="https://gist.github.com/ianaya89/55c2f6657254d195088b06fb1a28d99b.js"></script>
+          <p>
+            <small><code>app.all(METHOD, HANDLER)</code></small>
+            <br>
+            <small>Se pueden usar Regex en los paths</small>
+            <br>
+            <small>Usar <code>express.Router</code> para modularizar</small>
+          </p>
+        </section>
+
+        <section>
+          <h2>Parámetros</h2>
+          <ul>
+            <li>Segmentos de la url para capturar valores dinámicos.</li>
+            <li>Objeto <code>req.params</code></li>
+          </ul>
+          <script src="https://gist.github.com/ianaya89/f65cc16634048f653b31b05115fc2e32.js"></script>
+        </section>
+
+        <section>
+          <h2>Handlers</h2>
+          <ul>
+            <li>Multiples callbacks por cada endpoint</li>
+            <li>Método <code>next()</code></li>
+          </ul>
+          <script src="https://gist.github.com/ianaya89/a20c868c98a23829ccb60203916d636f.js"></script>
+        </section>
+
+        <section>
+          <h2>Response</h2>
+          <script src="https://gist.github.com/ianaya89/d4b35aba2b7f6e2f0076592c3ccc0298.js"></script>
+        </section>
+      </section>
+
+      <section>
+        <h1>Archivos Estáticos</h1>
+        <p>
+          El nombre de la carpeta queda fuera del path:
+          <br>
+          <code>public/images/img1.png</code> <i class="fa fa-arrow-right"></i> <code>images/img1.png</code>
+        </p>
+        <script src="https://gist.github.com/ianaya89/f34176890e01c3a6827261b2dd53293f.js"></script>
+      </section>
+
+      <section>
+        <section>
+          <h1>Middlewares</h1>
+          <ul>
+            <li>Funciones que acceden a <code>req</code>, <code>res</code> y <code>next()</code></li>
+            <li>Ejecutar cualquier tipo de codigo</li>
+            <li>Cambiar <code>res</code> o <code>req</code></li>
+            <li>Terminar el ciclo de vida del request</li>
+            <li>Llamar a la proximo middleware</li>
+          </ul>
+          <p>
+            <small>Siempre debemos utilizar <code>next()</code> para ceder el control o finalizar el request: <code>res.end()</code></small>
+          </p>
+        </section>
+
+        <section>
+          <h2>Creando Middlewares</h2>
+          <script src="https://gist.github.com/ianaya89/358b75c28e2299bdb3a45361feca0ad9.js"></script>
+        </section>
+
+        <section>
+          <h2>Tipos</h2>
+          <ul>
+            <li>Application Level <i class="fa fa-arrow-right"></i> <code>app.use()</code> o app.METHOD()</li>
+            <li>Router Level <i class="fa fa-arrow-right"></i> instancia de <code>express.Router</code></li>
+            <li>Error Handling <i class="fa fa-arrow-right"></i> recibe el primer parametro <code>err</code></li>
+            <li>Built-in <i class="fa fa-arrow-right"></i> <code>express.static</code></li>
+            <li>Third Party <i class="fa fa-arrow-right"></i> modulos de terceros (<code>body-parser</code>)</li>
+          </ul>
+        </section>
+      </section>
+
+      <section>
+        <section>
+          <h1>View Engine</h1>
+          <ul>
+            <li>Permite usar templates estaticos</li>
+            <li>Proceso de compilación (de template a HTML)</li>
+            <li>Pug, Mustache, EJS.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Usando View Engines</h2>
+          <script src="https://gist.github.com/ianaya89/47968a595390812679875dbe1651e396.js"></script>
+          <script src="https://gist.github.com/ianaya89/42ba36d42a9bc14932f1859ac01832bf.js"></script>
+        </section>
       </section>
     </div>
   </div>
