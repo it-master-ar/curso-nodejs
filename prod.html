@@ -1,0 +1,173 @@
+<!doctype html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>Intro | Curso Node.js | IT Master</title>
+
+  <link rel="icon" sizes="32x32" type="image/png" href="img/favicon.png">
+
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="css/theme/black.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" integrity="sha384-dNpIIXE8U05kAbPhy3G1cz+yZmTzA6CY8Vg/u2L9xRnHjJiAK76m2BIEaSEV+/aU" crossorigin="anonymous">
+
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="lib/css/zenburn.css">
+
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  </head>
+  <body>
+  <div class="reveal">
+    <div class="slides">
+
+      <section>
+        <section>
+          <h1>MongoDB</h1>
+        </section>
+
+        <section>
+          <h2>Qué Es?</h2>
+          <ul>
+            <li>Base de Datos Open Source</li>
+            <li>Orientada a Documentos (Objetos)</li>
+            <li>Performance, Escalabilidad y Disponibilidad</li>
+            <li>No se necesita ORM</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Ducuments</h2>
+          <ul>
+            <li>Registro (tupla, fila)</li>
+            <li>Estructura de datos (pares clave-valor)</li>
+            <li>"JSON"</li>
+            <li>Pueden tener otros docuemtosn, arrays o arrays de documentos</li>
+          </ul>
+          <script src="https://gist.github.com/ianaya89/2d078a1afa79bd5e1402796ed515770d.js"></script>
+        </section>
+
+        <section>
+          <h2>Collections</h2>
+          <ul>
+            <li>Almacenamiento para documentos</li>
+            <li>Analogas a las tables</li>
+            <li>No restringe esquemas</li>
+            <li>Clave primaria (_id)</li>
+          </ul>
+          <p>
+            <small><code>_id</code> se asigna por default</small>
+          </p>
+        </section>
+
+        <section>
+          <h2>Instalación</h2>
+          <ul>
+            <li><a href="https://docs.mongodb.com/getting-started/shell/tutorial/install-on-linux/">Linux</a></li>
+            <li><a href="https://docs.mongodb.com/getting-started/shell/tutorial/install-mongodb-on-os-x/">macOS</a></li>
+            <li><a href="https://docs.mongodb.com/getting-started/shell/tutorial/install-mongodb-on-windows/">Windows</a></li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Shell</h2>
+          <ul>
+            <li><code>$ mongo</code> o <code>$ mongo.exe</code></li>
+            <li><code>use [db]</code> <i class="fa fa-arrow-right"></i> seleccionar db</li>
+            <li>db.[collection].insert(document) <i class="fa fa-arrow-right"></i> insertar documento</li>
+            <li>db.[collection].find(query) <i class="fa fa-arrow-right"></i> busca documentos</li>
+            <li>db.[collection].update(query, updates, ...) <i class="fa fa-arrow-right"></i> modifica documentos</li>
+            <li>db.[collection].remove(query) <i class="fa fa-arrow-right"></i> borra documentos</li>
+            <li>db.[collection].drop() <i class="fa fa-arrow-right"></i> vacia una coleccion</li>
+          </ul>
+        </section>
+      </section>
+
+      <section>
+        <section>
+          <h1>Mongoose</h1>
+          <p>ODM para MongoDB y Node.js</p>
+        </section>
+
+        <section>
+          <h2>Por Qué?</h2>
+          <ul>
+            <li>Agilizar validaciones</li>
+            <li>Castear valores</li>
+            <li>Mas simple</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Instalación</h2>
+          <p><code>$ npm install <mongoose></mongoose></code></p>
+          <script src="https://gist.github.com/ianaya89/6cac4676e1e39b89692a4005e29470bb.js"></script>
+        </section>
+
+        <section>
+          <h2>Schema & Model</h2>
+          <script src="https://gist.github.com/ianaya89/f6a2d6156be6749a8eb9a9b4d33d4b3e.js"></script>
+        </section>
+
+        <section>
+          <h2>Validaciones</h2>
+          <ul>
+            <li>Se definen en los esquemas</li>
+            <li>Middleware</li>
+            <li>Automaticas y Manuales</li>
+            <li>Customizables</li>
+          </ul>
+          <pre>
+            <small>
+              <a href="http://mongoosejs.com/docs/validation.html">Docs</a>
+            </small>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Schema Methods</h2>
+          <script src="https://gist.github.com/ianaya89/dfde755c30c7cbfc4d510331a8b69ba6.js"></script>
+        </section>
+
+        <section>
+          <h2><code>save()</code></h2>
+          <script src="https://gist.github.com/ianaya89/aceaa39be99e73fe2948021193ea2cba.js"></script>
+        </section>
+
+        <section>
+          <h2><code>find()</code></h2>
+          <script src="https://gist.github.com/ianaya89/c77c418d2ba78f10e83d0e3263c8fb63.js"></script>
+        </section>
+      </section>
+
+
+    </div>
+  </div>
+
+  <script src="lib/js/head.min.js"></script>
+  <script src="js/reveal.js"></script>
+
+  <script>
+    Reveal.initialize({
+    history: true,
+
+    dependencies: [
+      { src: 'plugin/markdown/marked.js' },
+      { src: 'plugin/markdown/markdown.js' },
+      { src: 'plugin/notes/notes.js', async: true },
+      { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+    ]
+    });
+  </script>
+  </body>
+</html>
