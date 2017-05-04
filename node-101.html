@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-  <title>Intro | Curso Node.js | IT Master</title>
+  <title>Node 101 | Curso Node.js | IT Master</title>
 
   <link rel="icon" sizes="32x32" type="image/png" href="img/favicon.png">
 
@@ -67,8 +67,12 @@
       </section>
 
       <section>
+        <h2>Más simple...</h2>
         <p>Nos permite utilizar el lenguage JavaScript en el servidor e interactuar con el Sistema Operativo.</p>
-        <p>Algunos Modulos Internos:</p>
+      </section>
+
+      <section>
+        <h2>Algunos Modulos Internos</h2>
         <ul>
           <li>http</li>
           <li>fs</li>
@@ -87,9 +91,10 @@
           <li>100% Open Source</li>
           <li>Multiplataforma (funciona incluso en windows 😝)</li>
           <li><i>Single Thread</i></li>
-          <li>"Altamente Performante"</li>
-          <li>"Facil Escalabilidad"</li>
-          <li>Filosofia Unix <i class="fa fa-arrow-right"></i> "Hacer sola una cosa y hacerla bien", "Programas que funcionen juntos", "Manejar streams de texto".</li>
+          <li><i>"Altamente Performante"</i></li>
+          <li><i>"Facil Escalabilidad"</i></li>
+          <li>Filosofia Unix</li>
+          <!-- "Hacer sola una cosa y hacerla bien", "Programas que funcionen juntos", "Manejar streams de texto". -->
         </ul>
       </section>
 
@@ -113,7 +118,7 @@
       </section>
 
       <section>
-        <h2>v6</h2>
+        <h2>>= v6</h2>
         <ul>
           <li>99% de soporte sobre ES6</li>
           <li>Carga de modulos 4x mas rapida</li>
@@ -124,7 +129,7 @@
 
     <section>
       <section>
-        <h1>blocking vs. non-blcking</h1>
+        <h2>blocking vs. non-blcking</h2>
       </section>
 
       <section>
@@ -162,24 +167,25 @@
     <section>
       <section data-background="img/burns.gif">
         <h1>Concurrencia</h1>
-        <p>Capacidad de un sistema informatico de ejecutar procesos de computo de forma simultanea.</p>
+        <!-- <p>Capacidad de un sistema informatico de ejecutar procesos de computo de forma simultanea.</p> -->
       </section>
 
       <section>
         <h2>Single Thread</h2>
-        <ul>
-          <li>1 único thread.</li>
-          <li>Concurrencia orientada a eventos.</li>
-        </ul>
-        <p>Concurrencia manejada por el <i>Event-Loop</i> y nuestro buen criterio al usar <i>non-blocking</i>.</p>
+        <p>Orientado a Eventos</p>
+        <!-- <p>Concurrencia manejada por el <i>Event-Loop</i> y nuestro buen criterio al usar <i>non-blocking</i>.</p> -->
       </section>
 
       <section>
         <h2>Por qué Single Thread?</h2>
+      </section>
+
+      <section>
+        <h2>Multi Thread</h2>
         <ul>
-          <li>Es costoso para los OS cambiar de threads.</li>
-          <li>Es dificil (y tedioso) compartir informacion entre threads.</li>
-          <li>Implica mas codigo, mas tiempo de desarrollo y mas precauciones.</li>
+          <li>Costoso ➡️ para los OS cambiar de threads.</li>
+          <li>Dificil ➡️ compartir informacion entre threads.</li>
+          <li>Más ➡️ codigo, tiempo de desarrollo y precauciones.</li>
         </ul>
       </section>
     </section>
@@ -188,11 +194,11 @@
       <section>
         <h1>Event Driven</h1>
         <p>
-          Paradigma de programacion donde el flujo del programa es determinado por evetenos como acciones del usuario, sentores o mensajes de otros programas.
+          Paradigma de programacion donde el flujo del programa es determinado por evetenos como acciones del usuario, sensores o mensajes de otros programas.
         </p>
         <p>
           <small>
-            Node esta basado en <i class="fa fa-arrow-right"></i> <code>EventEmitter</code>
+            <code>EventEmitter</code>
           </small>
         </p>
       </section>
@@ -203,12 +209,16 @@
           Corazon de Node.js, responsable de registrar y ejecutar las operaciones asincronicas.
         </p>
         <p>Escucha eventos y dipara callbacks (a traves de una <i>queue</i>)</p>
-        <script src="https://gist.github.com/ianaya89/bc2c08fd601f4289c723bc8e786394bf.js"></script>
         <p>
           <small>
             <a href="https://blog.risingstack.com/node-js-at-scale-understanding-node-js-event-loop/">Understanding Event Loop</a>
           </small>
         </p>
+      </section>
+
+      <section>
+        <h2>Pseudo Código</h2>
+        <script src="https://gist.github.com/ianaya89/bc2c08fd601f4289c723bc8e786394bf.js"></script>
       </section>
 
     </section>

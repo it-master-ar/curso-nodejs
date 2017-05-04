@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-  <title>Intro | Curso Node.js | IT Master</title>
+  <title>npm | Curso Node.js | IT Master</title>
 
   <link rel="icon" sizes="32x32" type="image/png" href="img/favicon.png">
 
@@ -31,15 +31,17 @@
   <div class="reveal">
     <div class="slides">
     <section>
-      <h1>npm & <code>package.json</code></h1>
+      <h1>npm</h1>
+      <h3>&</h3>
+      <h1><code>package.json</code></h1>
     </section>
 
     <section>
       <section>
         <h1>npm</h1>
-        <p>Package manager creado para Node.js (y FrontEnd).</p>
-        <p>El registro de npm es una coleccion publica de librerias para Node.js, front-end, mobile, robots y mas.</p>
-        <p>Cliente de linea de comandos: <code>npm</code></p>
+        <p>Package manager creado para Node.js (y Front End).</p>
+        <!-- <p>El registro de npm es una coleccion publica de librerias para Node.js, front-end, mobile, robots y mas.</p>
+        <p>Cliente de linea de comandos: <code>npm</code></p> -->
         <p>
           <small>
             <a href="https://www.npmjs.com/browse/star">Modulos mas usados</a>
@@ -55,29 +57,28 @@
 
       <section>
         <h2>CLI</h2>
-        <p><i>Command Line Interface</i>: metodo que permite a usuarios interactuar con software por medio de texto simple</p>
+        <p><i>Command Line Interface</i></p>
       </section>
 
       <section>
-        <h2>Comandos <code>npm</code></h2>
+        <h2>Comandos</h2>
         <ul>
-          <li><code>--version</code> <i class="fa fa-arrow-right"></i> Obtener version</li>
-          <li><code>help</code> <i class="fa fa-arrow-right"></i> Buscar ayuda sobre otros comandos</li>
-          <li><code>init</code> <i class="fa fa-arrow-right"></i> Iniciar nuevo proyecto</li>
-          <li><code>outdated</code> <i class="fa fa-arrow-right"></i> Chequear dependencias desactualizadas</li>
-          <li><code>i</code> o <code>install</code> <i class="fa fa-arrow-right"></i> Instalar dependencias</li>
-          <li><code>uninstall</code> <i class="fa fa-arrow-right"></i> Desintalar dependencias</li>
+          <li><code>--version</code> ➡️ Obtener version</li>
+          <li><code>help</code> ➡️ Buscar ayuda sobre otros comandos</li>
+          <li><code>init</code> ➡️ Iniciar nuevo proyecto</li>
+          <li><code>outdated</code> ➡️ Chequear dependencias desactualizadas</li>
+          <li><code>i</code> o <code>install</code> ➡️ Instalar dependencias</li>
+          <li><code>uninstall</code> ➡️ Desintalar dependencias</li>
         </ul>
       </section>
 
       <section>
         <h2>Instalacion Local</h2>
-        <p><code>npm i [module]</code></p>
-        <p>Modulos instalados en el directorio actual dentro de <code>node_modules</code></p>
-        <hr>
         <ul>
-          <li><code>npm i -S [module]</code> <i class="fa fa-arrow-right"></i> Se guarda el modulo como <i>dependency</i></li>
-          <li><code>npm i -D [module]</code> <i class="fa fa-arrow-right"></i> Se guarda el modulo como <i>dev-dependency</i></li>
+          <li><code>npm i</code></li>
+          <li><code>npm i [module]</code></li>
+          <li><code>npm i -S [module]</code></li>
+          <li><code>npm i -D [module]</code></li>
         </ul>
         <p>
           <small><code>npm uninstall -S [module]</code></small>
@@ -87,10 +88,8 @@
       <section>
         <h2>Instalacion Global</h2>
         <p><code>npm i -g [module]</code></p>
-        <p>Modulos instalados a nivel global dentro de <code>node_modules</code></p>
-        <p>Pueden ser accedidos por linea de comandos</p>
         <p>
-          <small><code>npm uninstall -g [module]</code></small>
+          <small>Pueden ser accedidos por linea de comandos</small>
         </p>
       </section>
     </section>
@@ -98,12 +97,13 @@
     <section>
       <section>
         <h1><code>package.json</code></h1>
-        <ul>
-          <li>Contiene documentacion y metadata sobre el proyecto.</li>
-          <li>Almacena la lista de <i>depedencies</i> y <i>devDependencies</i> utilizadas.</li>
+        <p>Metadata + Ambiente Reproducible</p>
+        <!-- <ul>
+          <li>Metadata</li>
+          <li><i>depedencies</i> y <i>devDependencies</i></li>
           <li>Hace que el proyecto sea reproducible y facil de compartir.</li>
           <li>Podemos (y debemos) crearlo con el comando <code>npm init</code></li>
-        </ul>
+        </ul> -->
       </section>
 
       <section>
@@ -115,28 +115,24 @@
         <h2>SemVer</h2>
         <p>Empezar en version <code>1.0.0</code></p>
         <ul>
-          <li>Major <i class="fa fa-arrow-right"></i> Nueva funcionalidad CON <i>Breaking changes</i></li>
-          <li>Minor <i class="fa fa-arrow-right"></i> Nueva funcionalidad SIN <i>Breaking changes</i></li>
-          <li>Patch <i class="fa fa-arrow-right"></i> Bug fixing</li>
+          <li>Major</li>
+          <li>Minor</li>
+          <li>Patch</li>
         </ul>
         <p>
-          <small><a href="https://docs.npmjs.com/getting-started/semantic-versioning">semver</a></small>
+          <small><a href="https://docs.npmjs.com/getting-started/semantic-versioning">SemVer</a></small>
         </p>
       </section>
 
       <section>
         <h2>Manejando Dependencias</h2>
-        <ul style="font-size: 30px">
-          <li><code>npm i -S [module]</code> || <code> npm i --save [module]</code></li>
-          <li><code>npm i -D [module]</code> || <code> npm i --save-dev [module]</code></li>
-        </ul>
         <script src="https://gist.github.com/ianaya89/8cec956ff6f3173406c06ff4c80503c8.js"></script>
         <p>
-          <small><code>*</code> <i class="fa fa-arrow-right"></i> ultima version</small>
+          <small><code>*</code> ➡️ ultima version</small>
           <br>
-          <small><code>~</code> <i class="fa fa-arrow-right"></i> ultima <i>minor</i> version</small>
+          <small><code>~</code> ➡️ ultima <i>minor</i> version</small>
           <br>
-          <small><code>^</code> <i class="fa fa-arrow-right"></i> ultima <i>major</i> version</small>
+          <small><code>^</code> ➡️ ultima <i>major</i> version</small>
         </p>
       </section>
 
@@ -174,18 +170,13 @@
 
     <section>
       <h1>npm scripts</h1>
-      <p>Comandos que pueden ser definidos en el <code>package.json</code></p>
-      <p>Desde pequeñas utilidades hasta sistemas de build.</p>
       <ul>
-        <li><code>start</code> <i class="fa fa-arrow-right"></i> iniciar aplicacion</li>
-        <li><code>test</code> <i class="fa fa-arrow-right"></i> correr los tests</li>
-        <li><code>xxx</code> <i class="fa fa-arrow-right"></i> podemos definir nuestros propios scripts</li>
+        <li><code>start</code></li>
+        <li><code>test</code></li>
+        <li><code>[name]</code></li>
       </ul>
       <p>
-        <small>Salvo <code>test</code> y <code>start</code>, los scripts se corren con el comando <code>npm run [script]</code>.</small>
-      </p>
-      <p>
-        <small>Nos permiten evitar los modulos globales</small>
+        <code>npm run [name]</code>
       </p>
     </section>
 
