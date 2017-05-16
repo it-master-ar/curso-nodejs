@@ -52,18 +52,23 @@
             <li>Registro (tupla, fila)</li>
             <li>Estructura de datos (pares clave-valor)</li>
             <li>"JSON"</li>
-            <li>Pueden tener otros docuemtosn, arrays o arrays de documentos</li>
+            <li>Pueden tener otros documentos, arrays o arrays de documentos</li>
           </ul>
+        </section>
+        
+        <section>
+          <h2>Ejemplo de Ducuments</h2>
           <script src="https://gist.github.com/ianaya89/2d078a1afa79bd5e1402796ed515770d.js"></script>
         </section>
 
         <section>
           <h2>Collections</h2>
           <ul>
+            <li>Array de Documentos</li>
             <li>Almacenamiento para documentos</li>
-            <li>Analogas a las tables</li>
+            <li>Analogas a las tablas</li>
             <li>No restringe esquemas</li>
-            <li>Clave primaria (_id)</li>
+            <li>Identificador univoco (_id)</li>
           </ul>
           <p>
             <small><code>_id</code> se asigna por default</small>
@@ -83,12 +88,12 @@
           <h2>Shell</h2>
           <ul>
             <li><code>$ mongo</code> o <code>$ mongo.exe</code></li>
-            <li><code>use [db]</code> <i class="fa fa-arrow-right"></i> seleccionar db</li>
-            <li>db.[collection].insert(document) <i class="fa fa-arrow-right"></i> insertar documento</li>
-            <li>db.[collection].find(query) <i class="fa fa-arrow-right"></i> busca documentos</li>
-            <li>db.[collection].update(query, updates, ...) <i class="fa fa-arrow-right"></i> modifica documentos</li>
-            <li>db.[collection].remove(query) <i class="fa fa-arrow-right"></i> borra documentos</li>
-            <li>db.[collection].drop() <i class="fa fa-arrow-right"></i> vacia una coleccion</li>
+            <li><code>use [db]</code> ➡️ seleccionar db</li>
+            <li>db.[collection].insert(document) ➡️ insertar documento</li>
+            <li>db.[collection].find(query) ➡️ busca documentos</li>
+            <li>db.[collection].update(query, updates, ...) ➡️ modifica documentos</li>
+            <li>db.[collection].remove(query) ➡️ borra documentos</li>
+            <li>db.[collection].drop() ➡️ vacia una coleccion</li>
           </ul>
         </section>
       </section>
@@ -104,13 +109,13 @@
           <ul>
             <li>Agilizar validaciones</li>
             <li>Castear valores</li>
-            <li>Mas simple</li>
+            <li>Mas simple, menos codigo, mas estable</li>
           </ul>
         </section>
 
         <section>
           <h2>Instalación</h2>
-          <p><code>$ npm install <mongoose></mongoose></code></p>
+          <p><code>$ npm i -D mongoose</code></p>
           <script src="https://gist.github.com/ianaya89/6cac4676e1e39b89692a4005e29470bb.js"></script>
         </section>
 
